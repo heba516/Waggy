@@ -111,7 +111,7 @@ nav li a {
 }
 
 .products-row .main-title {
-    font-size: 3.5em;
+    font-size: calc(1rem + 3.3vw);
 }
 .products img {
     max-width: 100%;
@@ -152,4 +152,5 @@ nav li a {
 }
 .products .shop {
     border-color: #c3c0c0;
+    font-size: 1rem;
 }
