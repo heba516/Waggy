@@ -141,7 +141,7 @@ nav li a {
 .products-row .main-title {
     font-size: calc(1rem + 3.3vw);
 }
-.products img {
+.products img, .foods img {
     max-width: 100%;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -215,4 +215,17 @@ nav li a {
 }
 .discount_form input[type="submit"]:hover {
     background-color: #2b2a2a;
+}
+
+.food_menu li {
+    letter-spacing: 0.02125rem;
+    border: none;
+    border-bottom: 2px solid #D9D9D8;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 1.0625rem;
+    transition: all 0.3s ease-in;
+}
+.food_menu li.active {
+    border-color: var(--main-brown);
 }
