@@ -27,19 +27,27 @@ nav li a {
     color: black;
 }
 .landing {
-    background-color: #F9F3EC;;
+    background-color: #F9F3EC;
+    color: var(--gray);
 }
 .landing img {
-    max-width: 70%;
+    max-width: 95%;
+    height: auto;
 }
-.landing_text p{
-    font-size: calc(1.625rem + 4vw);
+.landing_text p, .discount h2{
+    font-size: calc(1.4rem + 4vw);
     font-weight: 300;
     line-height: 1.2;
     text-transform: capitalize;
 }
-.landing_text span, nav li a:hover {
+.landing_text span, nav li a:hover , .discount h2 span{
     color: var(--main-brown);
+}
+.landing_span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 .shop {
     border: 1px solid var(--gray);
@@ -110,6 +118,26 @@ nav li a {
     font-weight: 400;
 }
 
+.boxes {
+    display: block;
+    touch-action: pan-y;
+    position: relative;
+    overflow: hidden;
+}
+.products {
+    width: 100%;
+    position: relative;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+.products .box {
+    width: 288px;
+    position: relative;
+    flex-shrink: 0;
+}
 .products-row .main-title {
     font-size: calc(1rem + 3.3vw);
 }
@@ -153,4 +181,38 @@ nav li a {
 .products .shop {
     border-color: #c3c0c0;
     font-size: 1rem;
+}
+
+.discount {
+    background-image: url(/images/background-img.png);
+}
+.discount h2 {
+    font-size: calc(1.4rem + 2.8vw);
+}
+
+.discount_form input{
+    margin: auto;
+    width: 47%;
+    outline: none;
+    caret-color: var(--main-brown);
+    letter-spacing: 0.02125rem;
+    text-transform: capitalize;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(65, 64, 62, 0.20);
+}
+.discount_form input:focus {
+    outline: 1px solid #41403E;
+}
+.discount_form input[type="submit"] {
+    background-color: var(--gray);
+    color: white;
+    text-transform: uppercase;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+.discount_form input[type="submit"]:hover {
+    background-color: #2b2a2a;
 }
