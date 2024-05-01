@@ -14,6 +14,10 @@ a {
 ul {
     list-style: none;
 }
+img {
+    max-width: 100%;
+}
+
 
 nav .logo img {
     width: 130px;
@@ -142,7 +146,6 @@ nav li a {
     font-size: calc(1rem + 3.3vw);
 }
 .products img, .foods img {
-    max-width: 100%;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -191,8 +194,7 @@ nav li a {
 }
 
 .discount_form input{
-    margin: auto;
-    width: 47%;
+    width: 100%;
     outline: none;
     caret-color: var(--main-brown);
     letter-spacing: 0.02125rem;
@@ -218,6 +220,7 @@ nav li a {
 }
 
 .food_menu li {
+    cursor: pointer;
     letter-spacing: 0.02125rem;
     border: none;
     border-bottom: 2px solid #D9D9D8;
@@ -228,4 +231,55 @@ nav li a {
 }
 .food_menu li.active {
     border-color: var(--main-brown);
+}
+
+.posts img {
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+}
+.posts .date {
+    border-radius: 6px;
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: var(--main-brown);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.posts .date span {
+    font-size: 1rem;
+    color: var(--gray);
+}
+.posts p, .posts a {
+    color: #908F8D;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: normal;
+    font-family: 'Montserrat', sans-serif;
+}
+.posts a {
+    font-size: .8rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid #D9D9D8;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+.posts a:hover {
+    border-color: #908F8D;
+}
+
+.quotes p {
+    color: #908F8D;
+    font-size: 2rem;
+}
+.quotes svg {
+    font-size: 14rem;
+    color: var(--main-brown);
 }

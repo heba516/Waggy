@@ -481,7 +481,7 @@
     <div class="landing px-5">
         <div class="container px-5">
             <div class="row align-items-center">
-                <div class="col-12 col-md-5 p-5 offset-md-1 landing_text text-start">
+                <div class="col-12 col-md-5 p-sm-5 offset-md-1 landing_text text-start">
                     <span class="landing_span d-block mb-4">upto 40% OFF</span>
                     <p>Clearance Sale !!!</p>
                     <button class="shop p-3 ps-4 pe-4">Shop now
@@ -492,6 +492,28 @@
                     <img src="images/banner-img2.png" alt="">
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="quotes container p-5">
+        <div class="row py-5">
+            <div class="col-3 text-end">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.871 3.871 0 0 1-2.748-1.179m10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.871 3.871 0 0 1-2.748-1.179">
+                    </path>
+                </svg>
+            </div>
+            <div class="col-12 col-lg-8 mt-lg-5 p-0 pt-lg-5">
+                <p>"At the core of our practice is the idea that cities are the incubators of our greatest achievements,
+                    and the best hope for a sustainable future."</p>
+                <span class="text-black">- Joshima Lin</span>
+            </div>
+        </div>
+        <div class="spans text-center mt-3 mt-lg-0 ">
+            <span><button id="one"></button></span>
+            <span><button id="two"></button></span>
+            <span><button id="three"></button></span>
         </div>
     </div>
 
@@ -510,8 +532,7 @@
             <div class="products d-flex my-3">
                 <div class="box">
                     <div class="image">
-                        <span class="detail py-1 px-3 position-absolute">New</span>
-                        <img src="images/item1.jpg" alt="">
+                        <img src="images/item5.jpg" alt="">
                     </div>
                     <h3>grey hoodie</h3>
                     <div class="rate">
@@ -532,9 +553,9 @@
                 </div>
                 <div class="box mx-4">
                     <div class="image">
-                        <img src="images/item2.jpg" alt="">
+                        <img src="images/item6.jpg" alt="">
                     </div>
-                    <h3>blue Vest</h3>
+                    <h3>grey hoodie</h3>
                     <div class="rate">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -553,10 +574,10 @@
                 </div>
                 <div class="box me-4">
                     <div class="image">
-                        <span class="detail py-1 px-3 position-absolute">-10%</span>
-                        <img src="images/item3.jpg" alt="">
+                        <span class="detail py-1 px-3 position-absolute">Sale</span>
+                        <img src="images/item7.jpg" alt="">
                     </div>
-                    <h3>pink shirt</h3>
+                    <h3>grey hoodie</h3>
                     <div class="rate">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -575,9 +596,9 @@
                 </div>
                 <div class="box me-4">
                     <div class="image">
-                        <img src="images/item4.jpg" alt="">
+                        <img src="images/item8.jpg" alt="">
                     </div>
-                    <h3>black pajama</h3>
+                    <h3>grey hoodie</h3>
                     <div class="rate">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -597,7 +618,7 @@
                 <div class="box me-4">
                     <div class="image">
                         <span class="detail py-1 px-3 position-absolute">Sale</span>
-                        <img src="images/item5.jpg" alt="">
+                        <img src="images/item1.jpg" alt="">
                     </div>
                     <h3>grey hoodie</h3>
                     <div class="rate">
@@ -618,9 +639,9 @@
                 </div>
                 <div class="box">
                     <div class="image">
-                        <img src="images/item6.jpg" alt="">
+                        <img src="images/item19.jpg" alt="">
                     </div>
-                    <h3>black pajama</h3>
+                    <h3>grey hoodie</h3>
                     <div class="rate">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -642,14 +663,75 @@
     </div>
 
     <div class="discount py-5">
-        <div class="container py-5">
+        <div class="container py-">
             <h2 class="text-center">get 20% off on <span class="d-block">first purchase</span></h2>
-            <form action="" class="discount_form">
-                <input class="d-block p-3" type="email" placeholder="Enter your email address">
-                <input class="d-block my-3 p-3" type="password" placeholder="create password">
-                <input class="d-block mb-3 p-3" type="password" placeholder="repeat password">
-                <input class="d-block p-3" type="submit" value="register it now">
-            </form>
+            <div class="row">
+                <div class="col-md-6 m-auto">
+                    <form action="" class="discount_form">
+                        <input class="d-block p-3" type="email" placeholder="Enter your email address">
+                        <input class="d-block my-3 p-3" type="password" placeholder="create password">
+                        <input class="d-block mb-3 p-3" type="password" placeholder="repeat password">
+                        <input class="d-block p-3" type="submit" value="register it now">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="posts products-row container p-5">
+        <div class="row align-items-center mt-5">
+            <div class="col-12 col-sm-7">
+                <h2 class="main-title">latest blog post</h2>
+            </div>
+            <div class="col-12 col-sm text-start text-sm-end">
+                <button class="shop py-3 px-5">read all
+                    <i class="fa-solid fa-arrow-right ms-1"></i>
+                </button>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 col-md">
+                <div class="image">
+                    <p class="date bg-light m-2 text-center py-2 px-3 position-absolute">20<span
+                            class="d-block mt-2">Feb</span></p>
+                    <img src="images/blog1.jpg" alt="">
+                </div>
+                <div class="px-2">
+                    <h3 class="my-3">10 Reasons to be helpful towards any animals</h3>
+                    <p>At the core of our practice is the idea that cities are the incubators of our greatest
+                        achievements,
+                        and the best hope for a sustainable future.</p>
+                    <a href="">read more</a>
+                </div>
+            </div>
+            <div class="col-12 col-md">
+                <div class="image">
+                    <p class="date bg-light m-2 text-center py-2 px-3 position-absolute">21<span
+                            class="d-block mt-2">Feb</span></p>
+                    <img src="images/blog2.jpg" alt="">
+                </div>
+                <div class="px-2">
+                    <h3 class="my-3">How to know your pet is hungry</h3>
+                    <p>At the core of our practice is the idea that cities are the incubators of our greatest
+                        achievements,
+                        and the best hope for a sustainable future.</p>
+                    <a href="">read more</a>
+                </div>
+            </div>
+            <div class="col-12 col-md">
+                <div class="image">
+                    <p class="date bg-light m-2 text-center py-2 px-3 position-absolute">22<span
+                            class="d-block mt-2">Feb</span></p>
+                    <img src="images/blog3.jpg" alt="">
+                </div>
+                <div class="px-2">
+                    <h3 class="my-3">Best home for your pets</h3>
+                    <p>At the core of our practice is the idea that cities are the incubators of our greatest
+                        achievements,
+                        and the best hope for a sustainable future.</p>
+                    <a href="">read more</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
