@@ -283,3 +283,118 @@ nav li a {
     font-size: 14rem;
     color: var(--main-brown);
 }
+
+
+.service .icon {
+    border: 1px solid #c3c0c0;
+    border-radius: 50%;
+    width: fit-content;
+    padding: 20px;
+    margin-bottom: 15px;
+    
+}
+.service .icon svg{
+    width: 1.7rem;
+    color: var(--main-brown);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.service .text h3 {
+    text-transform: capitalize;
+}
+.service .text p {
+    color: #9f9d9d;
+}
+
+
+.insta .col img {
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.insta .col svg {
+    opacity: 0;
+    color: white;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -70%);
+    -webkit-transform: translate(-50%, -70%);
+    -moz-transform: translate(-50%, -70%);
+    -ms-transform: translate(-50%, -70%);
+    -o-transform: translate(-50%, -70%);
+    transition: .7s;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition: .7s;
+}
+.insta .col:hover svg {
+    opacity: 1;
+}
+
+
+
+.footer h3, .footer li, .footer input {
+    text-transform: capitalize;
+}
+.footer p {
+    color: #9f9d9d;
+}
+.footer .social div {
+    border: 1px solid #CACACA;
+    border-radius: 50%;
+    padding: 7px;
+    transition: .7s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition: .7s;
+}
+.footer .social div:hover {
+    background-color: var(--main-brown);
+    border-color: transparent;
+}
+.footer .social svg {
+    color: #CACACA;
+}
+.footer .social div:hover svg {
+    color: white;
+}
+.footer ul a {
+    color: #666666;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+.footer ul a:hover {
+    color: var(--main-brown);
+}
+.footer .send {
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    color: #FFF;
+    border: 1px solid var(--main-brown);
+    background: var(--main-brown);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+.copyright {
+    font-family: 'Montserrat', sans-serif;
+    color: #9f9d9d;
+}
