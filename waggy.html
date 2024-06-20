@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="CSS/style.css">
 
     <link rel="icon" href="images/twemoji--service-dog.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
                     <li><a href="waggy.html">About</a></li>
                 </ul>
             </div>
-            <div class="col-5 col-md-3 info d-flex justify-content-center">
+            <div class="col-5 col-md-3 info d-flex justify-content-center pt-2">
                 <div class="profile">
                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                     <lord-icon src="https://cdn.lordicon.com/hrjifpbq.json" trigger="hover">
@@ -45,14 +46,15 @@
                     <lord-icon src="https://cdn.lordicon.com/ulnswmkk.json" trigger="hover">
                     </lord-icon>
                 </div>
-                <div class="cart">
+                <div class="cart position-relative">
                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                     <lord-icon src="https://cdn.lordicon.com/pbrgppbb.json" trigger="hover">
                     </lord-icon>
+                    <span class="counter position-absolute translate-middle badge rounded-circle" id="counter">6</span>
                 </div>
             </div>
 
-            <div class="menu-icon col-2">
+            <div class="col-2 menu-icon pt-2">
                 <script src="https://cdn.lordicon.com/lordicon.js"></script>
                 <lord-icon id="menu-icon" src="https://cdn.lordicon.com/ipnwkgdy.json" trigger="hover">
                 </lord-icon>
@@ -60,27 +62,59 @@
         </div>
     </nav>
 
-    <div class="landing pt-4 pb-4">
+    <section class="landing p-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-sm-6 text-center">
-                    <img src="images/banner-img.png" alt="">
-                </div>
-                <div class="col-12 col-sm-6 landing_text">
-                    <span class="d-block mb-4">SAVE 10 - 20 % OFF</span>
-                    <p>Best destination for <span>your pets</span></p>
-                    <button class="shop p-3 ps-4 pe-4">Shop now
-                        <i class="fa-solid fa-arrow-right ms-1"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="spans text-center mt-3 mt-lg-0 ">
-                <span><button id="one"></button></span>
+            <swiper-container class="mySwiper" pagination="true">
+                <swiper-slide>
+                    <div class="row align-items-center">
+                        <div class="col-md-5 px-5">
+                            <img src="images/banner-img.png" alt="">
+                        </div>
+                        <div class="col-md-7 landing_text p-5">
+                            <span class="d-block mb-4">SAVE 10 - 20 % OFF</span>
+                            <p>Best destination for <span>your pets</span></p>
+                            <button class="shop py-3 px-4">Shop now
+                                <i class="fa-solid fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="row align-items-center">
+                        <div class="col-md-5 px-5">
+                            <img src="images/banner-img3.png" alt="">
+                        </div>
+                        <div class="col-md-7 landing_text p-5">
+                            <span class="d-block mb-4">SAVE 10 - 20 % OFF</span>
+                            <p>Best destination for <span>your pets</span></p>
+                            <button class="shop py-3 px-4">Shop now
+                                <i class="fa-solid fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="row align-items-center">
+                        <div class="col-md-5 px-5">
+                            <img src="images/banner-img4.png" alt="">
+                        </div>
+                        <div class="col-md-7 landing_text p-5">
+                            <span class="d-block mb-4">SAVE 10 - 20 % OFF</span>
+                            <p>Best destination for <span>your pets</span></p>
+                            <button class="shop py-3 px-4">Shop now
+                                <i class="fa-solid fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </swiper-slide>
+            </swiper-container>
+            <!-- <div class="spans text-center mt-3 mt-lg-0 ">
+                <span><button class="active" id="one"></button></span>
                 <span><button id="two"></button></span>
                 <span><button id="three"></button></span>
-            </div>
+            </div> -->
         </div>
-    </div>
+    </section>
 
     <div class="icons container text-center my-3 py-5">
         <div class="row my-5">
@@ -148,135 +182,150 @@
                 </button>
             </div>
         </div>
+        <!-- <div class="products d-flex my-3"> -->
         <div class="boxes">
-            <div class="products d-flex my-3">
-                <div class="box">
-                    <div class="image">
-                        <span class="detail py-1 px-3 position-absolute">New</span>
-                        <img src="images/item1.jpg" alt="">
+            <div class="mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <span class="detail py-1 px-3 position-absolute">New</span>
+                                <img src="images/item1.jpg" alt="">
+                            </div>
+                            <h3>grey hoodie</h3>
+                            <div class="rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="price my-1">$18.00</div>
+                            <div class="btns d-flex flex-wrap align-items-center">
+                                <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
+                                <button class="shop py-3 px-3">
+                                    <i class="fa-solid fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <h3>grey hoodie</h3>
-                    <div class="rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>5.0</span>
+                    <div class="swiper-slide">
+                        <div class="box mx-4">
+                            <div class="image">
+                                <img src="images/item2.jpg" alt="">
+                            </div>
+                            <h3>blue Vest</h3>
+                            <div class="rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="price my-1">$20.00</div>
+                            <div class="btns d-flex flex-wrap align-items-center">
+                                <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
+                                <button class="shop py-3 px-3">
+                                    <i class="fa-solid fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="price my-1">$18.00</div>
-                    <div class="btns d-flex flex-wrap align-items-center">
-                        <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                        <button class="shop py-3 px-3">
-                            <i class="fa-solid fa-heart"></i>
-                        </button>
+                    <div class="swiper-slide">
+                        <div class="box me-4">
+                            <div class="image">
+                                <span class="detail py-1 px-3 position-absolute">-10%</span>
+                                <img src="images/item3.jpg" alt="">
+                            </div>
+                            <h3>pink shirt</h3>
+                            <div class="rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="price my-1">$15.00</div>
+                            <div class="btns d-flex flex-wrap align-items-center">
+                                <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
+                                <button class="shop py-3 px-3">
+                                    <i class="fa-solid fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="box mx-4">
-                    <div class="image">
-                        <img src="images/item2.jpg" alt="">
+                    <div class="swiper-slide">
+                        <div class="box me-4">
+                            <div class="image">
+                                <img src="images/item4.jpg" alt="">
+                            </div>
+                            <h3>black pajama</h3>
+                            <div class="rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="price my-1">$16.00</div>
+                            <div class="btns d-flex flex-wrap align-items-center">
+                                <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
+                                <button class="shop py-3 px-3">
+                                    <i class="fa-solid fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <h3>blue Vest</h3>
-                    <div class="rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>5.0</span>
+                    <div class="swiper-slide">
+                        <div class="box me-4">
+                            <div class="image">
+                                <span class="detail py-1 px-3 position-absolute">New</span>
+                                <img src="images/item5.jpg" alt="">
+                            </div>
+                            <h3>grey hoodie</h3>
+                            <div class="rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="price my-1">$18.00</div>
+                            <div class="btns d-flex flex-wrap align-items-center">
+                                <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
+                                <button class="shop py-3 px-3">
+                                    <i class="fa-solid fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="price my-1">$20.00</div>
-                    <div class="btns d-flex flex-wrap align-items-center">
-                        <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                        <button class="shop py-3 px-3">
-                            <i class="fa-solid fa-heart"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="box me-4">
-                    <div class="image">
-                        <span class="detail py-1 px-3 position-absolute">-10%</span>
-                        <img src="images/item3.jpg" alt="">
-                    </div>
-                    <h3>pink shirt</h3>
-                    <div class="rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>5.0</span>
-                    </div>
-                    <div class="price my-1">$15.00</div>
-                    <div class="btns d-flex flex-wrap align-items-center">
-                        <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                        <button class="shop py-3 px-3">
-                            <i class="fa-solid fa-heart"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="box me-4">
-                    <div class="image">
-                        <img src="images/item4.jpg" alt="">
-                    </div>
-                    <h3>black pajama</h3>
-                    <div class="rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>5.0</span>
-                    </div>
-                    <div class="price my-1">$16.00</div>
-                    <div class="btns d-flex flex-wrap align-items-center">
-                        <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                        <button class="shop py-3 px-3">
-                            <i class="fa-solid fa-heart"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="box me-4">
-                    <div class="image">
-                        <span class="detail py-1 px-3 position-absolute">New</span>
-                        <img src="images/item5.jpg" alt="">
-                    </div>
-                    <h3>grey hoodie</h3>
-                    <div class="rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>5.0</span>
-                    </div>
-                    <div class="price my-1">$18.00</div>
-                    <div class="btns d-flex flex-wrap align-items-center">
-                        <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                        <button class="shop py-3 px-3">
-                            <i class="fa-solid fa-heart"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="image">
-                        <img src="images/item6.jpg" alt="">
-                    </div>
-                    <h3>black pajama</h3>
-                    <div class="rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>5.0</span>
-                    </div>
-                    <div class="price my-1">$16.00</div>
-                    <div class="btns d-flex flex-wrap align-items-center">
-                        <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                        <button class="shop py-3 px-3">
-                            <i class="fa-solid fa-heart"></i>
-                        </button>
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <img src="images/item6.jpg" alt="">
+                            </div>
+                            <h3>black pajama</h3>
+                            <div class="rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="price my-1">$16.00</div>
+                            <div class="btns d-flex flex-wrap align-items-center">
+                                <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
+                                <button class="shop py-3 px-3">
+                                    <i class="fa-solid fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -303,7 +352,7 @@
             </div>
         </div>
         <div class="row foods my-3">
-            <div class="col-6  col-md-4 col-lg-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="image">
                     <span class="detail py-1 px-3 position-absolute">New</span>
                     <img src="images/item9.jpg" alt="">
@@ -318,14 +367,14 @@
                     <span>5.0</span>
                 </div>
                 <div class="price my-1">$18.00</div>
-                <div class="btns d-flex flex-wrap align-items-center">
-                    <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                    <button class="shop py-3 px-3">
+                <div class="btns d-flex align-items-center">
+                    <button class="shop p-3 px-lg-4 me-1">add to cart</button>
+                    <button class="shop p-3">
                         <i class="fa-solid fa-heart"></i>
                     </button>
                 </div>
             </div>
-            <div class="col-6  col-md-4 col-lg-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5 mt-sm-0">
                 <div class="image">
                     <img src="images/item10.jpg" alt="">
                 </div>
@@ -339,14 +388,14 @@
                     <span>5.0</span>
                 </div>
                 <div class="price my-1">$20.00</div>
-                <div class="btns d-flex flex-wrap align-items-center">
-                    <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                    <button class="shop py-3 px-3">
+                <div class="btns d-flex align-items-center">
+                    <button class="shop p-3 px-lg-4 me-1">add to cart</button>
+                    <button class="shop p-3">
                         <i class="fa-solid fa-heart"></i>
                     </button>
                 </div>
             </div>
-            <div class="col-6  col-md-4 col-lg-3 mt-5 mt-md-0">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5 mt-md-0">
                 <div class="image">
                     <span class="detail py-1 px-3 position-absolute">-10%</span>
                     <img src="images/item11.jpg" alt="">
@@ -361,14 +410,14 @@
                     <span>5.0</span>
                 </div>
                 <div class="price my-1">$15.00</div>
-                <div class="btns d-flex flex-wrap align-items-center">
-                    <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                    <button class="shop py-3 px-3">
+                <div class="btns d-flex align-items-center">
+                    <button class="shop p-3 px-lg-4 me-1">add to cart</button>
+                    <button class="shop p-3">
                         <i class="fa-solid fa-heart"></i>
                     </button>
                 </div>
             </div>
-            <div class="col-6  col-md-4 col-lg-3 mt-5 mt-lg-0">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5 mt-lg-0">
                 <div class="image">
                     <img src="images/item12.jpg" alt="">
                 </div>
@@ -382,14 +431,14 @@
                     <span>5.0</span>
                 </div>
                 <div class="price my-1">$16.00</div>
-                <div class="btns d-flex flex-wrap align-items-center">
-                    <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                    <button class="shop py-3 px-3">
+                <div class="btns d-flex align-items-center">
+                    <button class="shop p-3 px-lg-4 me-1">add to cart</button>
+                    <button class="shop p-3">
                         <i class="fa-solid fa-heart"></i>
                     </button>
                 </div>
             </div>
-            <div class="col-6  col-md-4 col-lg-3 mt-5">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
                 <div class="image">
                     <span class="detail py-1 px-3 position-absolute">-10%</span>
                     <img src="images/item13.jpg" alt="">
@@ -404,14 +453,14 @@
                     <span>5.0</span>
                 </div>
                 <div class="price my-1">$15.00</div>
-                <div class="btns d-flex flex-wrap align-items-center">
-                    <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                    <button class="shop py-3 px-3">
+                <div class="btns d-flex align-items-center">
+                    <button class="shop p-3 px-lg-4 me-1">add to cart</button>
+                    <button class="shop p-3">
                         <i class="fa-solid fa-heart"></i>
                     </button>
                 </div>
             </div>
-            <div class="col-6  col-md-4 col-lg-3 mt-5">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
                 <div class="image">
                     <img src="images/item14.jpg" alt="">
                 </div>
@@ -425,14 +474,14 @@
                     <span>5.0</span>
                 </div>
                 <div class="price my-1">$16.00</div>
-                <div class="btns d-flex flex-wrap align-items-center">
-                    <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                    <button class="shop py-3 px-3">
+                <div class="btns d-flex align-items-center">
+                    <button class="shop p-3 px-lg-4 me-1">add to cart</button>
+                    <button class="shop p-3">
                         <i class="fa-solid fa-heart"></i>
                     </button>
                 </div>
             </div>
-            <div class="col-6  col-md-4 col-lg-3 mt-5">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
                 <div class="image">
                     <span class="detail py-1 px-3 position-absolute">Sale</span>
                     <img src="images/item15.jpg" alt="">
@@ -447,14 +496,14 @@
                     <span>5.0</span>
                 </div>
                 <div class="price my-1">$18.00</div>
-                <div class="btns d-flex flex-wrap align-items-center">
-                    <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                    <button class="shop py-3 px-3">
+                <div class="btns d-flex align-items-center">
+                    <button class="shop p-3 px-lg-4 me-1">add to cart</button>
+                    <button class="shop p-3">
                         <i class="fa-solid fa-heart"></i>
                     </button>
                 </div>
             </div>
-            <div class="col-6  col-md-4 col-lg-3 mt-5">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
                 <div class="image">
                     <img src="images/item16.jpg" alt="">
                 </div>
@@ -468,9 +517,9 @@
                     <span>5.0</span>
                 </div>
                 <div class="price my-1">$16.00</div>
-                <div class="btns d-flex flex-wrap align-items-center">
-                    <button class="shop py-3 px-3 px-lg-5 me-2">add to cart</button>
-                    <button class="shop py-3 px-3">
+                <div class="btns d-flex align-items-center">
+                    <button class="shop p-3 px-lg-4 me-1">add to cart</button>
+                    <button class="shop p-3">
                         <i class="fa-solid fa-heart"></i>
                     </button>
                 </div>
@@ -505,7 +554,8 @@
                 </svg>
             </div>
             <div class="col-12 col-lg-8 mt-lg-5 p-0 pt-lg-5">
-                <p>"At the core of our practice is the idea that cities are the incubators of our greatest achievements,
+                <p>"At the core of our practice is the idea that cities are the incubators of our greatest
+                    achievements,
                     and the best hope for a sustainable future."</p>
                 <span class="text-black">- Joshima Lin</span>
             </div>
@@ -792,7 +842,7 @@
         </div>
     </div>
 
-    <div class="insta container-fluid px-0 mt-5">
+    <div class="insta container-fluid mt-5">
         <div class="row">
             <div class="col position-relative p-0">
                 <img src="images/insta1.jpg" alt="">
@@ -959,5 +1009,8 @@
         </div>
     </div>
 </body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 </html>

@@ -4,6 +4,11 @@ html {
 * {
     box-sizing: border-box;
 }
+:root {
+    --main-brown: #DEAD6F;
+    --gray : #41403E;
+    --secondary-font: 'Montserrat', sans-serif;
+}
 body {
     font-family: "Chilanka", cursive;
     font-style: normal;
@@ -22,24 +27,19 @@ img {
 nav .logo img {
     width: 130px;
 }
-
-:root {
-    --main-brown: #DEAD6F;
-    --gray : #41403E;
-}
 nav li a {
     color: black;
 }
+nav .counter {
+    background-color: var(--main-brown);
+}
+
 .landing {
     background-color: #F9F3EC;
     color: var(--gray);
 }
-.landing img {
-    max-width: 95%;
-    height: auto;
-}
 .landing_text p, .discount h2{
-    font-size: calc(1.4rem + 4vw);
+    font-size: calc(1.2rem + 4vw);
     font-weight: 300;
     line-height: 1.2;
     text-transform: capitalize;
@@ -48,11 +48,33 @@ nav li a {
     color: var(--main-brown);
 }
 .landing_span {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--secondary-font);
     font-size: 1.4rem;
     font-weight: 300;
     text-transform: uppercase;
 }
+swiper-container spa {
+    width: 13px !important;
+    height: 13px !important;
+    border-radius: 50% !important;
+    border: 1px solid var(--gray) !important;
+    background-color: transparent;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
+}
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: green;
+}
+
 .shop {
     border: 1px solid var(--gray);
     border-radius: 5px;
@@ -81,18 +103,6 @@ nav li a {
 .shop:hover i {
     color: white !important;
     background-color: transparent;
-}
-
-.spans span button {
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    border: 1px solid var(--gray);
-    background-color: transparent;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
 }
 @media (min-width: 768px) {
     .menu {
@@ -178,12 +188,12 @@ nav li a {
     margin-left: 5px;
 }
 .products .price {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--secondary-font);
     font-size: 1.5em;
 }
 .products .shop {
     border-color: #c3c0c0;
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 .discount {
@@ -259,7 +269,7 @@ nav li a {
     font-size: .9rem;
     font-weight: 400;
     line-height: normal;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--secondary-font);
 }
 .posts a {
     font-size: .8rem;
@@ -395,6 +405,6 @@ nav li a {
 
 
 .copyright {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--secondary-font);
     color: #9f9d9d;
 }
