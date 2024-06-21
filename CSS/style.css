@@ -140,11 +140,11 @@ swiper-container spa {
     -ms-transition: .5s;
     -o-transition: .5s;
 }
-.products .box {
+/* .products .box {
     width: 288px;
     position: relative;
     flex-shrink: 0;
-}
+} */
 .products-row .main-title {
     font-size: calc(1rem + 3.3vw);
     text-transform: capitalize;
