@@ -4,12 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css.map">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="icon" href="images/twemoji--service-dog.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
-<body>
+<body class="cart_body">
 
-    <a href="waggy.html">waggy</a>
+    <nav class="p-3 mb-5">
+        <a href="waggy.html"><img src="images/logo.png" alt=""></a>
+    </nav>
+
+    <div class="cart container text-center mb-5 ps-0">
+        <h3 class="title mb-5">your cart</h3>
+        <div class="row cart-row w-75 justify-content-between m-auto">
+        </div>
+        <div class="p-md-5 dtotals text-center d-flex align-items-center justify-content-around">
+            <p>Total</p>
+            <p class="totals">13</p>
+        </div>
+
+        <a href="waggy.html" class="order d-block m-auto p-3 w-50">Place Order</a>
+    </div>
+
     <script src="main.js"></script>
 </body>
 
