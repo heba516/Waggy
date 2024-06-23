@@ -47,6 +47,9 @@ h3, .empty {
 }
 
 
+nav {
+    z-index: 10000;
+}
 nav .logo img {
     width: 130px;
 }
