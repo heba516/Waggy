@@ -2,7 +2,7 @@ let counterSpan = document.querySelector(".counter");
 
 let counter = localStorage.getItem("counter") ? parseInt(localStorage.getItem("counter")) : 0;
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
+let totals = JSON.parse(localStorage.getItem('totals'));
 
 
 if(counterSpan) {
@@ -12,10 +12,11 @@ if(counterSpan) {
 }
 
 
-function product(img, name, price) {
+function product(img, name, price, qty=1) {
     this.productImg = img;
     this.productName = name;
     this.productPrice = price;
+    this.quantity = qty;
 }
 
 function containsProduct(cart, product) {
@@ -105,6 +106,7 @@ if (cartContainer && counter == 0){
         
         let removeEle = document.createElement('a');
         removeEle.className = "remove d-block text-center mt-2";
+        removeEle.href = "#";
         removeEle.textContent = "Remove";
         
         quantity.appendChild(qty);
@@ -116,51 +118,69 @@ if (cartContainer && counter == 0){
         productDiv.appendChild(eleTotal);
 
         let line = document.createElement('hr');
+        productDiv.appendChild(line);
         
         cartContainer.appendChild(productDiv);
-        cartContainer.appendChild(line);
     });
 }
 
 
 ////////////////////////////////////////////////////////////////
-let totals = 0;
+
+calcTotal();
+
 let plus = document.querySelectorAll(".fa-plus");
-plus.forEach((click)=> {
+plus.forEach((click, index1)=> {
+    click.previousElementSibling.textContent = parseInt(JSON.parse(localStorage.getItem('cart'))[index1].quantity);
+    
     let total = click.closest('.product').querySelector('.total').textContent ;
+    click.closest('.product').querySelector('.total').textContent = `${parseInt(total) * click.previousElementSibling.textContent}.00`;
+    
     click.addEventListener(("click"), (e)=> {
         if (click.previousElementSibling.textContent == 10) {
             click.style.cursor = 'not-allowed';
             return
         }
-        click.previousElementSibling.textContent++;
-        click.closest('.product').querySelector('.total').textContent = `${total * click.previousElementSibling.textContent}.00`;
+        
+        let index = findIndex(cart, click);
+        
+        click.previousElementSibling.textContent = parseInt(JSON.parse(localStorage.getItem('cart'))[index].quantity) + 1;
+        cart[index].quantity = click.previousElementSibling.textContent;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        click.closest('.product').querySelector('.total').textContent = `${JSON.parse(localStorage.getItem('cart'))[index].productPrice * click.previousElementSibling.textContent}.00`;
+    
+        calcTotal();
+    
         click.previousElementSibling.previousElementSibling.style.cursor = 'pointer';
-        totals += parseInt(total);
-        document.querySelector('.totals').textContent = `$${totals}`;
     })
 });
 
 let minus = document.querySelectorAll(".fa-minus");
-minus.forEach((click)=> {
+minus.forEach((click, index1)=> {
+    click.nextElementSibling.textContent = parseInt(JSON.parse(localStorage.getItem('cart'))[index1].quantity);
+    
     let total = click.closest('.product').querySelector('.total').textContent ;
+    
     click.addEventListener(("click"), (e)=> {
         if (click.nextElementSibling.textContent == 1) {
             click.style.cursor = 'not-allowed';
             return
         }
-        click.nextElementSibling.textContent--;
-        click.closest('.product').querySelector('.total').textContent = `${total * click.nextElementSibling.textContent}.00`;
+        
+        let index = findIndex(cart, click);
+        
+        click.nextElementSibling.textContent = parseInt(JSON.parse(localStorage.getItem('cart'))[index].quantity) - 1;
+        cart[index].quantity = click.nextElementSibling.textContent;
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        click.closest('.product').querySelector('.total').textContent = `${JSON.parse(localStorage.getItem('cart'))[index].productPrice * click.nextElementSibling.textContent}.00`;
+
+        calcTotal();
+    
         click.nextElementSibling.nextElementSibling.style.cursor = 'pointer';
-        totals += parseInt(total);
-        document.querySelector('.totals').textContent = `$${totals}`;
     })
 });
-
-document.querySelectorAll('.total').forEach ((total)=> {
-    totals += parseInt(total.textContent);
-    document.querySelector('.totals').textContent = `$${totals}`;
-})
 
 
 ////////////////////////////////////////////////////////////////
@@ -170,4 +190,30 @@ if(document.querySelector('.order')) {
     }
 }else {
     console.log("not found");
+}
+
+
+document.querySelectorAll('.remove').forEach((remove)=> {
+    remove.addEventListener("click", (e)=> {
+        cart = cart.filter(item => item.productImg !== remove.closest('.product').querySelector('img').src);
+        counter--;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        localStorage.setItem('counter', counter);
+        remove.closest('.product').remove();
+        calcTotal();
+    })
+}) 
+
+
+function calcTotal() {
+    totals = 0;
+    document.querySelectorAll('.total').forEach ((total, index)=> {
+        totals += JSON.parse(localStorage.getItem('cart'))[index].quantity * JSON.parse(localStorage.getItem('cart'))[index].productPrice;
+        localStorage.setItem('totals', JSON.stringify(totals));
+        document.querySelector('.totals').textContent = `$${JSON.parse(localStorage.getItem('totals'))}`;
+    })
+}
+
+function findIndex(sArray, sClick) {
+    return sArray.findIndex(obj => obj.productImg == sClick.closest('.product').querySelector('img').src);
 }
