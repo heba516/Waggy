@@ -7,6 +7,7 @@ html {
 :root {
     --main-brown: #DEAD6F;
     --gray : #41403E;
+    --gray2 : #9f9d9d;
     --secondary-font: 'Montserrat', sans-serif;
 }
 body {
@@ -25,13 +26,32 @@ img {
 h3, .empty {
     text-transform: capitalize;
 }
+::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--main-brown);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
 
 
 nav .logo img {
     width: 130px;
 }
 nav li a {
-    color: black;
+    color: var(--gray);
 }
 nav .counter {
     background-color: var(--main-brown);
@@ -57,9 +77,9 @@ nav .counter {
     text-transform: uppercase;
 }
 
-
 .shop {
-    border: 1px solid var(--gray);
+    font-size: .9rem;
+    border: 1px solid #c3c0c0;
     border-radius: 5px;
     background-color: transparent;
     text-transform: uppercase;
@@ -92,11 +112,6 @@ nav .counter {
         display: block !important;
     }
 }
-/* @media (min-width: 768px) {
-    .menu-icon {
-        display: none !important;
-    }
-} */
 
 .icons svg {
     height: 6em;
@@ -136,9 +151,9 @@ nav .counter {
 }
 .products .detail, .box .detail {
     margin: 15px;
-    border: 1px solid #9f9d9d;
+    border: 1px solid var(--gray2);;
     border-radius: 8px;
-    color: #9f9d9d;
+    color: var(--gray2);;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
@@ -155,17 +170,15 @@ nav .counter {
     color: var(--main-brown);
 }
 .products .rate span, .boxes .box .rate span {
-    color: #9f9d9d;
+    color: var(--gray2);;
     margin-left: 5px;
 }
 .products .price, .boxes .box .price  {
     font-family: var(--secondary-font);
     font-size: 1.5em;
 }
-.shop {
-    border-color: #c3c0c0;
-    font-size: .9rem;
-}
+
+
 
 .discount {
     background-image: url(/images/background.png);
@@ -283,7 +296,7 @@ nav .counter {
     -o-border-radius: 50%;
 }
 .service .text p {
-    color: #9f9d9d;
+    color: var(--gray2);;
 }
 
 
@@ -321,7 +334,7 @@ nav .counter {
     text-transform: capitalize;
 }
 .footer p {
-    color: #9f9d9d;
+    color: var(--gray2);;
 }
 .footer .social div {
     border: 1px solid #CACACA;
@@ -372,7 +385,7 @@ nav .counter {
 }
 .copyright {
     font-family: var(--secondary-font);
-    color: #9f9d9d;
+    color: var(--gray2);;
 }
 
 
@@ -410,7 +423,6 @@ nav .counter {
 
 .empty {
     font-weight: 600;
-    
 }
 
 .fa-minus, .fa-plus {
