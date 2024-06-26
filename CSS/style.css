@@ -184,7 +184,7 @@ nav .counter {
 
 
 .discount {
-    background-image: url(/images/background.png);
+    background-image: url(../images/background.png);
 }
 .discount h2 {
     font-size: calc(1.4rem + 2.8vw);
